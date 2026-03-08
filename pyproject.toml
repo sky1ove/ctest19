@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctest19"
+dynamic = ["version"]
+description = "ctest19 nbdev project"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "sky1ove", email = "lcai888666@gmail.com"}]
+keywords = ['nbdev']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/sky1ove/ctest19"
+Documentation = "https://sky1ove.github.io/ctest19/"
+
+[project.entry-points.nbdev]
+ctest19 = "ctest19._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "ctest19.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["ctest19"]
+
+[tool.nbdev]
+title = "ctest19"
+lib_path = "ctest19"
